@@ -1,0 +1,28 @@
+@import "../../weui/css/weui.wxss";
+.weui-search-bar{
+	background-color: white;
+	padding: 5px 10px;
+}
+.weui-search-bar-btn {
+  margin-left: 10px;
+  line-height: 36px;
+  color: #09BB07;
+  white-space: nowrap;	
+  vertical-align:text-top;
+  width: 40px;
+}
+.weui-search-bar__box{
+	line-height: 36px;
+}
+
+.weui-search-bar__input{
+	height: 36px;
+	line-height: 36px;
+}
+
+.weui-search-bar icon{
+	vertical-align:text-top;
+	padding-top: 7px;
+}
+
+

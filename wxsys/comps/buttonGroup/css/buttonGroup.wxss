@@ -1,0 +1,22 @@
+.wx-btn-group{
+	display: -webkit-flex;
+	display: flex;
+    width: inherit;
+/*     height: inherit; */
+    background-color: #F8F8F8;
+}
+.wx-btn-group.wx-btn-transversegroup{
+	display: block;
+}
+.wx-btn-group .WxButton{
+		margin:0;
+		flex:1;
+		-webkit-flex:1;
+		border-radius:0;
+}
+.wx-btn-group button{
+		margin:0;
+		flex:1;
+		-webkit-flex:1;
+		border-radius:0;
+}
