@@ -1,0 +1,75 @@
+<view class="x-page" id="page" style="">
+
+<view class="weui-loader-full {{_random1.loadingNum <= 0 ?'weui-loader-hide':''}}" style="z-index: 10001;" id="_random1">
+<view class="ball-scale-ripple-multiple">
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/></view></view>
+<view id="inVisibleCompContainer"/>
+<view class="x-panel x-full" id="panel">
+<view class="x-panel-content" id="content" style="top:0px;bottom:48px;background-color:#FFFDE7">
+<view class="x-row" id="row" style="height:141px;background-color:#FFFDE7">
+<view class="x-col x-col-fixed" id="col" style="text-align: center;margin-left:10px">
+<image class="weui-img" id="image1" mode="scaleToFill" style="width:137px;height:128px" src="{{image1.url}}"/></view>
+<view class="x-col x-col-center" id="col2">
+<view class="x-row" id="row1">
+<view class="x-col" id="col5">
+<text id="text" style="font-size:19px;width:188px;height:48px">{{((restData.current.fquanzimc)===null || (restData.current.fquanzimc)===undefined || (restData.current.fquanzimc)==='') ? '' : (restData.current.fquanzimc)}}</text></view></view>
+<view class="x-row" id="row2">
+<view class="x-col" id="col8">
+<text id="text1" style="font-size:15px">{{(("圈子成员：")===null || ("圈子成员：")===undefined || ("圈子成员：")==='') ? '' : ("圈子成员：")}}</text>
+<text id="text7" style="font-size:15px">{{((text7.text)===null || (text7.text)===undefined || (text7.text)==='') ? '' : (text7.text)}}</text>
+<text id="text8">{{text8.text}}</text></view></view></view></view>
+<view class="wx-btn-group" id="buttonGroup">
+<button class="wx-btn" id="button" style="background-color:#FFEB3B;font-weight: normal;color:#000000" loading="{{button.debounce}}" data-compid="{{button.compid}}" data-bindtap="$evtH_button_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon id="icon" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view">{{(('简介')===null || ('简介')===undefined || ('简介')==='') ? '' : ('简介')}}</view></button>
+<button class="wx-btn" id="button2" style="background-color:#FFFDE7;color:#999999" loading="{{button2.debounce}}" data-compid="{{button2.compid}}" data-bindtap="$evtH_button2_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon id="icon2" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view2">{{(('动态')===null || ('动态')===undefined || ('动态')==='') ? '' : ('动态')}}</view></button>
+<button class="wx-btn" id="button5" style="background-color:#FFFDE7;color:#999999" loading="{{button5.debounce}}" data-compid="{{button5.compid}}" data-bindtap="$evtH_button5_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon id="icon5" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view5">{{(('圈子')===null || ('圈子')===undefined || ('圈子')==='') ? '' : ('圈子')}}</view></button>
+<button class="wx-btn" id="button6" style="background-color:#FFFDE7;color:#999999" loading="{{button6.debounce}}" data-compid="{{button6.compid}}" data-bindtap="$evtH_button6_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon id="icon6" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view6">{{(('操作')===null || ('操作')===undefined || ('操作')==='') ? '' : ('操作')}}</view></button></view>
+<view class="x-row" id="row3">
+<view class="x-col" id="col6">
+<text id="text15" style="font-size:18px">{{text15.text}}</text></view></view>
+<view class="x-row" id="row5" style="border-top:2px dashed #EEEEEE">
+<view class="x-col" id="col10" style="border-bottom:2px solid #EEEEEE">
+<text id="text3" style="font-size:18px">{{((restData.current.fchuangjianropenid_yonghub_fnicheng)===null || (restData.current.fchuangjianropenid_yonghub_fnicheng)===undefined || (restData.current.fchuangjianropenid_yonghub_fnicheng)==='') ? '' : (restData.current.fchuangjianropenid_yonghub_fnicheng)}}</text></view></view>
+<view class="x-row" id="row7">
+<view class="x-col" id="col16" style="">
+<text id="text4" style="font-size:18px">{{text4.text}}</text></view></view>
+<view class="x-row" id="row8" style="border-top:2px dashed #eeeeee">
+<view class="x-col" id="col19" style="border-bottom:2px solid #EEEEEE">
+<text id="text12" style="font-size:19px">{{((restData.current.fjuanziksrj + "至" + restData.current.fjuanzijsrj)===null || (restData.current.fjuanziksrj + "至" + restData.current.fjuanzijsrj)===undefined || (restData.current.fjuanziksrj + "至" + restData.current.fjuanzijsrj)==='') ? '' : (restData.current.fjuanziksrj + "至" + restData.current.fjuanzijsrj)}}</text></view></view>
+<view class="x-row" id="row9">
+<view class="x-col" id="col22">
+<text id="text5" style="font-size:18px">{{text5.text}}</text></view></view>
+<view class="x-row" id="row10" style="border-top:2px dashed #EEEEEE">
+<view class="x-col" id="col25" style="border-bottom:2px solid #EEEEEE">
+<text id="text13" style="font-size:19px">{{((text13.text)===null || (text13.text)===undefined || (text13.text)==='') ? '' : (text13.text)}}</text></view></view>
+<view class="x-row" id="row12">
+<view class="x-col" id="col33">
+<text id="text6" style="font-size:18px">{{text6.text}}</text></view></view>
+<view class="x-row" id="row14" style="border-width:2px;border-top:2px dashed #EEEEEE">
+<view class="x-col" id="col4" style="border-bottom:2px solid #eeeeee">
+<text id="text11" style="font-size:18px">{{((restData.current.fjuanzijs)===null || (restData.current.fjuanzijs)===undefined || (restData.current.fjuanzijs)==='') ? '' : (restData.current.fjuanzijs)}}</text></view></view>
+<view class="x-row" id="row15">
+<view class="x-col" id="col11">
+<text id="text10" style="font-size:18px">{{text10.text}}</text></view></view>
+<view class="x-row" id="row16" style="border-width:2px;border-top:2px dashed #EEEEEE">
+<view class="x-col" id="col12" style="border-bottom:2px solid #EEEEEE">
+<text id="text14" style="font-size:18px">{{((restData.current.fdakagz)===null || (restData.current.fdakagz)===undefined || (restData.current.fdakagz)==='') ? '' : (restData.current.fdakagz)}}</text></view></view></view>
+<view class="x-panel-bottom" height="48" id="bottom" style="text-align: left;height:48px">
+<view class="wx-btn-group" id="buttonGroup1">
+<button class="wx-btn" id="button4" style="background-color:#FFEB3B" loading="{{button4.debounce}}" data-compid="{{button4.compid}}" data-bindtap="$evtH_button4_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind" disabled="{{button4.disabled}}">
+<icon id="icon4" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view4">{{((view4.text)===null || (view4.text)===undefined || (view4.text)==='') ? '' : (view4.text)}}</view></button>
+<button class="wx-btn" id="button7" style="background-color:#FFEB3B" loading="{{button7.debounce}}" data-compid="{{button7.compid}}" data-bindtap="$evtH_button7_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind" disabled="{{button7.disabled}}">
+<icon id="icon7" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view7">{{((view7.text)===null || (view7.text)===undefined || (view7.text)==='') ? '' : (view7.text)}}</view></button></view></view></view><view id="__toptips__" class="wx-toptips" style="{{(!__toptips__.show) ? 'display:none!important' : ''}}"><view wx:for="{{__toptips__.msgs}}" wx:key="_key" class="wx-toptips-item {{item.typeClass}} {{item.show?'wx-toptips--show':''}}">{{item.message}}</view></view></view>

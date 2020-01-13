@@ -1,0 +1,47 @@
+<view class="x-page" id="page" style="background-color:#FFFDE7">
+
+<view class="weui-loader-full {{_random1.loadingNum <= 0 ?'weui-loader-hide':''}}" style="z-index: 10001;" id="_random1">
+<view class="ball-scale-ripple-multiple">
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/></view></view>
+<view id="inVisibleCompContainer"/>
+<view class="x-panel x-full" id="panel">
+<view class="x-panel-content" id="content" style="top:0px;bottom:48px">
+<view class="x-row" id="row" style="background-color:#ffe082;height:107px">
+<view class="x-col x-col-center" id="col2" style="text-align: center">
+<text id="text" style="font-size:21px;font-weight: bold">{{((restData1.current.userName)===null || (restData1.current.userName)===undefined || (restData1.current.userName)==='') ? '' : (restData1.current.userName)}}</text>
+<button class="wx-btn wx-btn-icon-left" icon="linear linear-cog" id="button3" style="height:36px;background-color:#FFF2CC;color:#000000;font-weight: bold" loading="{{button3.debounce}}" data-compid="{{button3.compid}}" data-bindtap="$evtH_button3_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon class="d-wx-icon linear linear-cog wx-icon" id="icon1" size="15" type="wx-btn-icon"/>
+<view class="wx-btn-label" id="view">{{(('设置')===null || ('设置')===undefined || ('设置')==='') ? '' : ('设置')}}</view></button></view></view>
+<view class="x-row" id="row4" style="margin-top:10px">
+<view class="x-col" id="col13" style="text-align: center;background-color:#ffe082">
+<text id="text2" style="font-size:18px;font-weight: bold">{{text2.text}}</text></view></view>
+<view _created="true" id="list" label="动态列表" style="margin-top:5px;margin-bottom:5px;border-bottom:2px solid #EEEEEE" wx:for-item="listitem" wx:for-index="listindex" wx:for="{{list.items}}" wx:key="_key" data-index="{{listindex}}" data-idcolumn="{{listitem.fid}}" data-compid="{{list.compid}}" data-pageid="{{__pageid__}}" data-capture-bindtap="{{list.compid}}:onRowClick" capture-bind:tap="dispatchCaptureBind">
+<view class="x-row" id="row5">
+<view class="x-col x-col-10" id="col15">
+<text id="text5" style="font-size:16px;font-weight:bold;display:block">{{((listitem.$children.text5.text)===null || (listitem.$children.text5.text)===undefined || (listitem.$children.text5.text)==='') ? '' : (listitem.$children.text5.text)}}</text>
+<text id="text6" style="display:block">{{((listitem.$children.text6.text)===null || (listitem.$children.text6.text)===undefined || (listitem.$children.text6.text)==='') ? '' : (listitem.$children.text6.text)}}</text></view>
+<view class="x-col" id="col16">
+<view class="x-row" id="row6">
+<view class="x-col" id="col19">
+<text id="text4">{{(("打卡圈子：" + listitem.fjuanziid_juanzi_fquanzimc)===null || ("打卡圈子：" + listitem.fjuanziid_juanzi_fquanzimc)===undefined || ("打卡圈子：" + listitem.fjuanziid_juanzi_fquanzimc)==='') ? '' : ("打卡圈子：" + listitem.fjuanziid_juanzi_fquanzimc)}}</text></view></view>
+<view class="x-row" id="row7">
+<view class="x-col" id="col22">
+<text id="text3">{{((listitem.fdakarxq)===null || (listitem.fdakarxq)===undefined || (listitem.fdakarxq)==='') ? '' : (listitem.fdakarxq)}}</text></view></view>
+<view class="x-row" id="row8">
+<view class="x-col" id="col25">
+<image class="weui-img" id="image1" mode="scaleToFill" src="{{listitem.$children.image1.url}}"/></view></view></view></view></view></view>
+<view class="x-panel-bottom" id="bottom">
+<view class="wx-btn-group" id="buttonGroup">
+<button class="wx-btn wx-btn-icon-top" icon="e-commerce e-commerce-gou" id="button" style="background-color:#ffffff;color:#424242" loading="{{button.debounce}}" data-compid="{{button.compid}}" data-bindtap="$evtH_button_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon class="d-wx-icon e-commerce e-commerce-gou wx-icon" id="icon2" size="15" type="wx-btn-icon"/>
+<view class="wx-btn-label" id="view1">{{(('打卡')===null || ('打卡')===undefined || ('打卡')==='') ? '' : ('打卡')}}</view></button>
+<button class="wx-btn wx-btn-icon-top" icon="e-commerce e-commerce-jiahao" id="button1" style="background-color:#ffffff;color:#424242" loading="{{button1.debounce}}" data-compid="{{button1.compid}}" data-bindtap="$evtH_button1_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon class="d-wx-icon e-commerce e-commerce-jiahao wx-icon" id="icon3" size="15" type="wx-btn-icon"/>
+<view class="wx-btn-label" id="view2">{{(('发现')===null || ('发现')===undefined || ('发现')==='') ? '' : ('发现')}}</view></button>
+<button class="wx-btn wx-btn-icon-top" icon="linear linear-user" id="button2" style="background-color:#ffffff;color:#ffeb3b;font-weight: bold" loading="{{button2.debounce}}">
+<icon class="d-wx-icon linear linear-user wx-icon" id="icon4" size="15" type="wx-btn-icon"/>
+<view class="wx-btn-label" id="view3">{{(('我的')===null || ('我的')===undefined || ('我的')==='') ? '' : ('我的')}}</view></button></view></view></view><view id="__toptips__" class="wx-toptips" style="{{(!__toptips__.show) ? 'display:none!important' : ''}}"><view wx:for="{{__toptips__.msgs}}" wx:key="_key" class="wx-toptips-item {{item.typeClass}} {{item.show?'wx-toptips--show':''}}">{{item.message}}</view></view></view>

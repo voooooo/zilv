@@ -1,0 +1,18 @@
+<view class="x-page" id="page">
+
+<view class="weui-loader-full {{_random1.loadingNum <= 0 ?'weui-loader-hide':''}}" style="z-index: 10001;" id="_random1">
+<view class="ball-scale-ripple-multiple">
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/></view></view>
+<view id="inVisibleCompContainer">
+<view content="您是否填写完毕？您的意见将对我们帮助很大！" id="messageDialog" title="提交确认" data-compid="{{messageDialog.compid}}" data-pageid="{{__pageid__}}"/></view>
+<view class="x-row" id="row">
+<view class="x-col" id="col2" style="background-color:#ffe082;text-align: center">
+<text id="text" style="font-size:18px;font-weight: bold;text-align: center">{{text.text}}</text></view></view>
+<textarea class="weui-textarea WxTextarea weui-cell__bd" id="textarea" placeholder="请输入对我们的意见和建议" style="margin-top:10px;height:186px;border:2px solid #F3F3F3" data-compid="{{textarea.compid}}" bindblur="dispatchBind" data-pageid="{{__pageid__}}" bindinput="dispatchBind" data-bindblur="{{textarea.compid}}:onChange" data-bindinput="{{textarea.compid}}:onInput"/>
+<button class="wx-btn" id="button" style="background-color:#ffe082;font-weight: bold;font-size:18px;margin-top:10px" loading="{{button.debounce}}" data-compid="{{button.compid}}" data-bindtap="$evtH_button_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon id="icon" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view">{{(('提交')===null || ('提交')===undefined || ('提交')==='') ? '' : ('提交')}}</view></button><view id="__toptips__" class="wx-toptips" style="{{(!__toptips__.show) ? 'display:none!important' : ''}}"><view wx:for="{{__toptips__.msgs}}" wx:key="_key" class="wx-toptips-item {{item.typeClass}} {{item.show?'wx-toptips--show':''}}">{{item.message}}</view></view></view>

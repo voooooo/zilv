@@ -1,0 +1,29 @@
+<view class="x-page" id="page" style="" data-compid="{{page.compid}}" data-pageid="{{__pageid__}}">
+
+<view id="inVisibleCompContainer">
+<block appPath="$UI/main" autoLoadUserInfo="true" autoLogin="false" autoUpdateUserInfo="true" id="user" useOpenid="false" data="restData3" data-compid="{{user.compid}}" data-pageid="{{__pageid__}}">
+</block>
+<block appPath="$UI/main" id="wxxcx_login" miniappLogin="true" mpLogin="false"/></view>
+<view class="x-panel x-full" id="panel">
+<view class="x-panel-content" id="content" style="top:0px;bottom:48px;background-color:#FFFDE7">
+<button class="wx-btn wx-btn-icon-left" icon="e-commerce e-commerce-jiahao" id="button4" size="default" style="background-color:#FFEB3B;margin-bottom:10px;font-weight: bold" type="primary" loading="{{button4.debounce}}" data-compid="{{button4.compid}}" data-bindtap="$evtH_button4_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon class="d-wx-icon e-commerce e-commerce-jiahao wx-icon" id="icon5" size="15" type="wx-btn-icon"/>
+<view class="wx-btn-label" id="view4">{{(('加入新的圈子')===null || ('加入新的圈子')===undefined || ('加入新的圈子')==='') ? '' : ('加入新的圈子')}}</view></button>
+<view _created="true" id="list" label="动态列表" style="height:112px;margin-bottom:10px;background-color:#FFFFFF;margin-left:5px;margin-right:5px;box-shadow:#EEEEEE 0px 0px 0px 0px" wx:for-item="listitem" wx:for-index="listindex" wx:for="{{list.items}}" wx:key="_key" data-index="{{listindex}}" data-idcolumn="{{listitem.fid}}" data-compid="{{list.compid}}" data-bindtap="$evtH_list_tap" data-pageid="{{__pageid__}}" bindtap="dispatchBind" data-capture-bindtap="{{list.compid}}:onRowClick" capture-bind:tap="dispatchCaptureBind">
+<view class="x-row" id="row2" style="height:110px">
+<view class="x-col x-col-33" id="col6">
+<image class="weui-img" id="image1" mode="scaleToFill" style="width:113px;height:103px" src="{{listitem.$children.image1.url}}"/></view>
+<view class="x-col x-col-center" id="col8">
+<text id="text1" style="display:block;font-size:21px;color:#424242;margin-bottom:10px;font-weight:bold">{{((listitem.fhuodongid_juanzi_fquanzimc)===null || (listitem.fhuodongid_juanzi_fquanzimc)===undefined || (listitem.fhuodongid_juanzi_fquanzimc)==='') ? '' : (listitem.fhuodongid_juanzi_fquanzimc)}}</text>
+<text id="text2" style="display:block;font-size:15px;color:#424242">{{((listitem.fhuodongid_juanzi_fjuanzijs)===null || (listitem.fhuodongid_juanzi_fjuanzijs)===undefined || (listitem.fhuodongid_juanzi_fjuanzijs)==='') ? '' : (listitem.fhuodongid_juanzi_fjuanzijs)}}</text></view></view></view></view>
+<view class="x-panel-bottom" id="bottom">
+<view class="wx-btn-group" id="buttonGroup">
+<button class="wx-btn wx-btn-icon-top" icon="e-commerce e-commerce-gou" id="button" style="background-color:#FFFFFF;color:#FFEB3B;font-weight: bold;border-width:1px;border-color:#ffeb3b;border:0px solid #ffeb3b" loading="{{button.debounce}}">
+<icon class="d-wx-icon e-commerce e-commerce-gou wx-icon" id="icon" size="15" type="wx-btn-icon"/>
+<view class="wx-btn-label" id="view">{{(('打卡')===null || ('打卡')===undefined || ('打卡')==='') ? '' : ('打卡')}}</view></button>
+<button class="wx-btn wx-btn-icon-top" icon="e-commerce e-commerce-jiahao" id="button1" style="background-color:#FFFFFF;font-weight: normal;color:#424242;border-width:1px;border-color:#000" loading="{{button1.debounce}}" data-compid="{{button1.compid}}" data-bindtap="$evtH_button1_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon class="d-wx-icon e-commerce e-commerce-jiahao wx-icon" id="icon1" size="15" type="wx-btn-icon"/>
+<view class="wx-btn-label" id="view1">{{(('发现')===null || ('发现')===undefined || ('发现')==='') ? '' : ('发现')}}</view></button>
+<button class="wx-btn wx-btn-icon-top" icon="linear linear-user" id="button2" style="background-color:#FFFFFF;color:#424242;font-weight: normal;border-width:1px;border-color:#000" loading="{{button2.debounce}}" data-compid="{{button2.compid}}" data-bindtap="$evtH_button2_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon class="d-wx-icon linear linear-user wx-icon" id="icon2" size="15" type="wx-btn-icon"/>
+<view class="wx-btn-label" id="view2">{{(('我的')===null || ('我的')===undefined || ('我的')==='') ? '' : ('我的')}}</view></button></view></view></view><view id="__toptips__" class="wx-toptips" style="{{(!__toptips__.show) ? 'display:none!important' : ''}}"><view wx:for="{{__toptips__.msgs}}" wx:key="_key" class="wx-toptips-item {{item.typeClass}} {{item.show?'wx-toptips--show':''}}">{{item.message}}</view></view></view>

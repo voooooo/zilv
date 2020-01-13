@@ -1,0 +1,56 @@
+<view class="x-page" id="page" style="">
+
+<view class="weui-loader-full {{_random1.loadingNum <= 0 ?'weui-loader-hide':''}}" style="z-index: 10001;" id="_random1">
+<view class="ball-scale-ripple-multiple">
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/></view></view>
+<view id="inVisibleCompContainer">
+<view content="确认要退出圈子？" id="messageDialog" title="删除确认" data-compid="{{messageDialog.compid}}" data-pageid="{{__pageid__}}"/>
+<view content="确认要删除圈子吗？" id="messageDialog1" title="删除确认" data-compid="{{messageDialog1.compid}}" data-pageid="{{__pageid__}}"/></view>
+<view class="x-panel x-full" id="panel">
+<view class="x-panel-content" id="content" style="top:0px;bottom:48px;background-color:#FFFDE7">
+<view class="x-row" id="row" style="height:141px;background-color:#FFFDE7">
+<view class="x-col x-col-fixed" id="col" style="text-align: center;margin-left:10px">
+<image class="weui-img" id="image1" mode="scaleToFill" style="width:137px;height:128px" src="{{image1.url}}"/></view>
+<view class="x-col x-col-center" id="col2">
+<view class="x-row" id="row1">
+<view class="x-col" id="col5">
+<text id="text" style="font-size:19px">{{((restData.current.fquanzimc)===null || (restData.current.fquanzimc)===undefined || (restData.current.fquanzimc)==='') ? '' : (restData.current.fquanzimc)}}</text></view></view>
+<view class="x-row" id="row2">
+<view class="x-col" id="col8">
+<text id="text1">{{(("圈子成员：")===null || ("圈子成员：")===undefined || ("圈子成员：")==='') ? '' : ("圈子成员：")}}</text>
+<text id="text2">{{((text2.text)===null || (text2.text)===undefined || (text2.text)==='') ? '' : (text2.text)}}</text>
+<text id="text3">{{text3.text}}</text></view></view></view></view>
+<view class="wx-btn-group" id="buttonGroup">
+<button class="wx-btn" id="button" style="background-color:#FFFDE7;color:#999999" loading="{{button.debounce}}" data-compid="{{button.compid}}" data-bindtap="$evtH_button_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon id="icon" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view">{{(('简介')===null || ('简介')===undefined || ('简介')==='') ? '' : ('简介')}}</view></button>
+<button class="wx-btn" id="button2" style="background-color:#FFFDE7;color:#999999" loading="{{button2.debounce}}" data-compid="{{button2.compid}}" data-bindtap="$evtH_button2_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon id="icon2" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view2">{{(('动态')===null || ('动态')===undefined || ('动态')==='') ? '' : ('动态')}}</view></button>
+<button class="wx-btn" id="button3" style="background-color:#FFFDE7;color:#999999" loading="{{button3.debounce}}" data-compid="{{button3.compid}}" data-bindtap="$evtH_button3_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon id="icon3" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view3">{{(('圈子')===null || ('圈子')===undefined || ('圈子')==='') ? '' : ('圈子')}}</view></button>
+<button class="wx-btn" id="button4" style="background-color:#ffeb3b" loading="{{button4.debounce}}">
+<icon id="icon4" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view4">{{(('操作')===null || ('操作')===undefined || ('操作')==='') ? '' : ('操作')}}</view></button></view>
+<button class="wx-btn wx-btn-circle wx-btn-icon-top" icon="icon-arrow-return-left" id="button6" style="font-size:16px;width:80px;height:80px;margin-left:10px;margin-right:10px;margin-top:10px;background-color:#FFE082" loading="{{button6.debounce}}" data-compid="{{button6.compid}}" data-bindtap="$evtH_button6_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon class="d-wx-icon icon-arrow-return-left wx-icon" id="icon7" size="15" type="wx-btn-icon"/>
+<view class="wx-btn-label" id="view6">{{(('退出圈子')===null || ('退出圈子')===undefined || ('退出圈子')==='') ? '' : ('退出圈子')}}</view></button>
+<button class="wx-btn wx-btn-circle wx-btn-icon-top" icon="icon-close-round" id="button7" style="font-size:15px;margin-right:10px;margin-left:10px;margin-top:10px;width:80px;height:80px;background-color:#FFE082; {{(button7.hidden) ? 'display:none!important' : ''}}" loading="{{button7.debounce}}" data-compid="{{button7.compid}}" data-bindtap="$evtH_button7_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon class="d-wx-icon icon-close-round wx-icon" id="icon9" size="15" type="wx-btn-icon"/>
+<view class="wx-btn-label" id="view7">{{(('删除圈子')===null || ('删除圈子')===undefined || ('删除圈子')==='') ? '' : ('删除圈子')}}</view></button>
+<button class="wx-btn wx-btn-circle wx-btn-icon-top" icon="icon-load-b" id="button8" style="margin-left:10px;margin-right:10px;margin-top:10px;width:80px;height:80px;background-color:#FFE082; {{(button8.hidden) ? 'display:none!important' : ''}}" loading="{{button8.debounce}}" data-compid="{{button8.compid}}" data-bindtap="$evtH_button8_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind">
+<icon class="d-wx-icon icon-load-b wx-icon" id="icon10" size="15" type="wx-btn-icon"/>
+<view class="wx-btn-label" id="view8">{{(('编辑圈子')===null || ('编辑圈子')===undefined || ('编辑圈子')==='') ? '' : ('编辑圈子')}}</view></button></view>
+<view class="x-panel-bottom" id="bottom">
+<view class="wx-btn-group" id="buttonGroup1">
+<button class="wx-btn" id="button1" style="background-color:#ffeb3b" loading="{{button1.debounce}}" disabled="{{button1.disabled}}">
+<icon id="icon1" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view1">{{((view1.text)===null || (view1.text)===undefined || (view1.text)==='') ? '' : (view1.text)}}</view></button>
+<button class="wx-btn" id="button5" style="background-color:#ffeb3b" loading="{{button5.debounce}}" data-compid="{{button5.compid}}" data-bindtap="$evtH_button5_tap" data-pageid="{{__pageid__}}" bindtap="debounceDispatchBind" disabled="{{button5.disabled}}">
+<icon id="icon5" size="15" type="wx-btn-icon" class=" wx-icon"/>
+<view class="wx-btn-label" id="view5">{{((view5.text)===null || (view5.text)===undefined || (view5.text)==='') ? '' : (view5.text)}}</view></button></view></view></view><view id="__toptips__" class="wx-toptips" style="{{(!__toptips__.show) ? 'display:none!important' : ''}}"><view wx:for="{{__toptips__.msgs}}" wx:key="_key" class="wx-toptips-item {{item.typeClass}} {{item.show?'wx-toptips--show':''}}">{{item.message}}</view></view></view>

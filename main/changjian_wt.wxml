@@ -1,0 +1,14 @@
+<view class="x-page" id="page">
+
+<view class="weui-loader-full {{_random1.loadingNum <= 0 ?'weui-loader-hide':''}}" style="z-index: 10001;" id="_random1">
+<view class="ball-scale-ripple-multiple">
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/>
+<view class="weui-loader-view"/></view></view>
+<view id="inVisibleCompContainer"/>
+<view class="x-row" id="row">
+<view class="x-col" id="col2" style="background-color:#ffe082;text-align: center;margin-bottom:10px">
+<text id="text" style="font-size:18px;font-weight: bold;text-align: center">{{text.text}}</text></view></view>
+<text id="text1">{{text1.text}}</text><view id="__toptips__" class="wx-toptips" style="{{(!__toptips__.show) ? 'display:none!important' : ''}}"><view wx:for="{{__toptips__.msgs}}" wx:key="_key" class="wx-toptips-item {{item.typeClass}} {{item.show?'wx-toptips--show':''}}">{{item.message}}</view></view></view>
