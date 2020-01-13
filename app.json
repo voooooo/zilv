@@ -1,0 +1,40 @@
+{
+  "networkTimeout": {},
+  "pages": [
+    "main/index",
+    "main/daka_y",
+    "wxsys/comps/user/userDialog/user",
+    "main/wode",
+    "main/quanzi_bjy",
+    "main/userDialog/login",
+    "main/quanzi_xqy",
+    "wxsys/comps/user/userDialog/authorize",
+    "main/quanzi_dkxqy",
+    "wxsys/comps/user/userDialog/changePassword",
+    "main/changjian_wt",
+    "main/userDialog/forgetPassword",
+    "main/userDialog/register",
+    "main/userDialog/authorize",
+    "main/yijian_fk",
+    "main/chuangjian_xdqz",
+    "main/userDialog/user",
+    "wxsys/comps/user/userDialog/bindphone",
+    "main/userDialog/changePassword",
+    "wxsys/comps/user/userDialog/register",
+    "main/chuangjian_cg",
+    "main/quanzi_dty",
+    "main/quanzi_czy",
+    "wxsys/comps/user/userDialog/login",
+    "main/chazhao_qz",
+    "main/guanyu_wm",
+    "main/faxian",
+    "wxsys/comps/user/userDialog/forgetPassword",
+    "main/shezhi",
+    "main/userDialog/bindphone"
+  ],
+  "debug": false,
+  "window": {
+    "navigationBarTitleText": "自律"
+  },
+  "sitemapLocation": "sitemap.json"
+}
